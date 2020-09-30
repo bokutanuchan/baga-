@@ -1,0 +1,317 @@
+﻿@charset "utf-8";
+
+
+/*　ハンバーガーメニュー　*/
+/*　ハンバーガーボタン　*/
+.hamburger {
+  display : block;
+  position: fixed;
+  z-index : 3;
+  right : 0px;
+  top   : 0px;
+  width : 42px;
+  height: 42px;
+  cursor: pointer;
+  text-align: center;
+ background : #765506;
+}
+.hamburger span {
+  display : block;
+  position: absolute;
+  width   : 30px;
+  height  : 2px ;
+  left    : 6px;
+  background : white;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition   : 0.3s ease-in-out;
+  transition        : 0.3s ease-in-out;
+}
+.hamburger span:nth-child(1) {
+  top: 10px;
+}
+.hamburger span:nth-child(2) {
+  top: 20px;
+}
+.hamburger span:nth-child(3) {
+  top: 30px;
+}
+
+/* ナビ開いてる時のボタン */
+.hamburger.active span:nth-child(1) {
+  top : 16px;
+  left: 6px;
+  background :white;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform   : rotate(-45deg);
+  transform        : rotate(-45deg);
+}
+
+.hamburger.active span:nth-child(2),
+.hamburger.active span:nth-child(3) {
+  top: 16px;
+  background :white;
+  -webkit-transform: rotate(45deg);
+  -moz-transform   : rotate(45deg);
+  transform        : rotate(45deg);
+}
+
+nav.globalMenuSp {
+  position: fixed;
+  z-index : 2;
+  top  : 0;
+  left : 0;
+  color: red;
+  background: #765506;
+  text-align: center;
+  width: 100%;
+  opacity: 0;
+  transition: opacity .6s ease, visibility .6s ease;
+}
+
+nav.globalMenuSp ul {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+nav.globalMenuSp ul li {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  transition: .4s all;
+}
+nav.globalMenuSp ul li:last-child {
+  padding-bottom: 0;
+}
+nav.globalMenuSp ul li:hover{
+  background :skyblue;
+}
+
+nav.globalMenuSp ul li a {
+  display: block;
+  color: white;
+  padding: 1em 0;
+  text-decoration :none;
+}
+
+/* このクラスを、jQueryで付与・削除する */
+nav.globalMenuSp.active {
+  opacity: 100;
+
+}
+
+/*最小で768pxまでハンバーガーメニューを非表示*/
+@media screen and (min-width:768px) {
+.globalMenuSp,.hamburger {
+    display:none;
+  }
+}
+
+/*最大で767pxまでナビゲーションを非表示*/
+@media screen and (max-width:767px) {
+#headnav ul li {
+    display:none;
+  }
+}
+
+
+@media screen and (min-width:768px){
+/* PC用CSS -------------- */
+.hoge{
+display: none;
+}
+}
+
+@media screen and (max-width:767px){
+/* スマホ用CSS -------------- */
+.hoge{
+display: none;
+}
+}
+
+body{
+width: 100%;
+}
+
+header{
+position: relative;
+z-index: 2;
+margin: 0 auto;
+height: 60px;
+width: 100%;
+} 
+
+#head{
+max-width: 960px;
+width: 100%;
+height: 60px;
+margin: 0 auto;
+margin-top: 30px;
+background-color: rgba( 255, 255, 255, 0.55 );
+}
+
+/*最大で767pxまでナビゲーションを非表示*/
+@media screen and (max-width:767px) {
+#head {
+    display:none;
+  }
+}
+
+/*最大で767pxまでナビゲーションを非表示*/
+@media screen and (min-width:768px) {
+#kakure {
+    display:none;
+  }
+}
+
+
+#logo{
+float: left;
+}
+
+#nav1,#nav2,#nav3{
+text-decoration: none;
+float: left;
+line-height:60px
+} 
+
+#nav1 a:hover,#nav2 a:hover,#nav3 a:hover{
+color: yellow;
+} 
+
+#nav1,#nav2,#nav3{
+margin-left: 150px;
+}
+
+#nav1 a,#nav2 a,#nav3 a{
+text-decoration: none;
+color: black;
+font-size: 20px;
+} 
+
+#contents{
+width: 100%;
+clear: both;
+background: red;
+}
+
+#top{
+position: absolute;
+top: -80px;
+left: 0;
+width: 100%;
+height: 50vh;
+background-image: url(../images/top.jpg);
+background-repeat: no-repeat no-repeat;
+background-size: cover;
+z-index: 1;
+}
+
+#tyousei{
+width: 100%;
+height: 35vh;
+}
+
+#menu{
+text-align: center;
+height: 120vh;
+}
+
+#mainmenu{
+max-width: 960px;
+width: 100%;
+margin: 0 auto;
+}
+
+h1{
+font-size: 30px;
+margin-bottom: 40px;
+}
+
+h2{
+margin-bottom: 20px;
+height: 5vh;
+}
+
+#menulist{
+height: 35vh;
+}
+
+#baga1,#baga2,#baga3{
+float: left;
+width: 33%;
+}
+
+#drink1,#drink2,#drink3{
+float: left;
+width: 33%;
+}
+
+#said1,#said2,#said3{
+float: left;
+width: 33%;
+}
+
+#newsmain{
+height: 40vh;
+}
+
+#newssabu{
+max-width: 960px;
+width: 100%;
+height: 50px;
+margin: 0 auto;
+text-align: center;
+}
+
+ul li{
+list-style-type: none;
+padding-bottom: 40px;
+}
+
+ul li a:hover{
+color: red;
+}
+
+#access{
+text-align: center;
+height: 60vh;
+}
+
+#tizu{
+max-width: 50%;
+border: solid 1px black;
+float: left;
+}
+
+#tokoro{
+max-width: 100%;
+padding-left:50px;
+margin-top:10vh;
+float: left;
+}
+
+#ruto{
+max-width: 960px;
+width: 100%;
+height: 60px;;
+margin: 0 auto
+}
+
+#icon1,#icon2,#icon3,#icon4{
+float: left;
+width: 5%;
+margin-left: 15%;
+margin-top: 20px;
+}
+
+#icon1{
+width: 3%;
+}
+
+footer{
+text-align: center;
+clear: both;
+width: 100%;
+border-top: solid 1px #765506;
+}

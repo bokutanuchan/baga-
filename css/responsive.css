@@ -1,0 +1,27 @@
+﻿@charset "utf-8";
+
+header{
+ background : #765506;
+height: 42px;
+background-image: url(../images/logo.png);
+background-repeat: no-repeat no-repeat;
+}
+
+
+#kakure{
+color:white;
+line-height: 42px;
+margin-left: 100px;
+}
+
+#baga1,#baga2,#baga3{
+width: 33%;
+}
+
+#drink1,#drink2,#drink3{
+width: 33%;
+}
+
+#said1,#said2,#said3{
+width: 33%;
+}
